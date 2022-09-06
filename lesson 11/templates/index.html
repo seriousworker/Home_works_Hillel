@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print - {{ lines }} tracks</title>
+</head>
+<body>
+    <table>
+        <caption>Table of the best-selling tracks</caption>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Sold </th>
+            <th>&nbsp;&nbsp;Total price</th>
+        </tr>
+        {% for song in songs %}
+            <tr>
+                <td>&nbsp;&nbsp;{{ song.id }}</td>
+                <td>&nbsp;&nbsp;{{ song.name }}</td>
+                <td>&nbsp;&nbsp;{{ song.sold_qu }}</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;{{ song.total_price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
