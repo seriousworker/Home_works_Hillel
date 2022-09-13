@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div>
+            <h1>
+                BitPay Exchange Rates
+            </h1>
+        <p>
+            <a href="{{ url_for('index') }}">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="{{ url_for('show_all_rates') }}">All exchange rate</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="{{ url_for('search_by_currency') }}">Search by currency</a>
+        </p>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

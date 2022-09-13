@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    All exchange rates
+{% endblock %}
+
+{% block content %}
+    <table>
+    <thead>
+            <tr>
+                <th>Currency</th>
+                <th>Rate</th>
+                <th align="left">Code</th>
+            </tr>
+    </thead>
+            <tbody>
+            {% for cur in  data %}
+                <tr>
+                    <td>{{ cur.get('name') }}</td>
+                    <td align="right">{{ cur.get('rate') }}</td>
+                    <td>{{ cur.get('code') }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+{% endblock %}

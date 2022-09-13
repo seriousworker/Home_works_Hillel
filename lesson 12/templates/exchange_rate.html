@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ data['name'] }} current rate
+{% endblock %}
+
+{% block content %}
+    1BTC  -  {{ data['rate'] }} {{ data['code'] }}
+{% endblock %}
